@@ -82,9 +82,6 @@ app.use((req,res,next)=>{
     next();
 });
 
-app.use("/", (req, res) => {
-    res.redirect("/listings");
-})
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
@@ -103,4 +100,3 @@ app.use((err,req,res,next)=>{
 app.listen("8080",()=>{
     console.log("server is listening on port");
 });
-
